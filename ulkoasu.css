@@ -1,0 +1,99 @@
+  h1 {
+    color: #C8C8C8;    
+  }
+
+   h3 {
+    color: #C8C8C8;    
+  }
+
+  p {
+    font-size: 100%;
+  }
+
+  body {
+    background: #FFFFFF;
+    background-image: linear-gradient(to right, #C22526, #600F2A);
+    background-position:left top;
+    background-repeat: no-repeat;
+    background-size: 100% 350px;
+    font-family: Century Gothic;
+  }
+
+
+button {
+    background-color: #600F2A; /* Uusi taustaväri */
+    color: white; /* Tekstin väri */
+    padding: 10px 20px; /* Lisää tilaa napin ympärille */
+    border-radius: 10px;
+    border-style: none;
+
+}
+
+button:hover {background-color: #2D0615}
+
+button:active {
+    background-color: #2D0615;
+    transform: translateY(2px);
+}
+img {
+    position: relative;
+    width: 300px; 
+    height: auto; 
+    margin-top: 25px;
+}
+
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.navigointi {
+  position: relative;
+  top: 1em;
+  margin-left: 2em;
+}
+
+.navigointi ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+
+.builder h4 {
+  position: relative;
+  top: 1em;
+}
+
+.builder {
+  position: relative;
+  top: 1em;
+  margin-left: 2em;
+}
+
+.ohjeet {
+  position: relative;
+  top: 1.5em;
+  margin-left: 2em;
+}
+
+.otsikko {
+  position: absolute;
+  left: 50%;
+  top: 8em;
+  text-align: center;
+  transform: translate(-50%)
+}
+
+@media screen and (max-width: 768px) {
+  .otsikko {
+    left: auto; 
+    right: 10px; 
+    top: 8em;
+    text-align: center; 
+    transform: none; 
+  }
+}

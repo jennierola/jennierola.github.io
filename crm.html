@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="ulkoasu.css" />
+  <script src="mainonta-script.js"></script>
+  <title>URL-Builder</title>
+</head>
+<body>
+
+  <img src="mtvlogo.png" alt="kuva"/>
+
+  <div class="navigointi">
+    <h2>Valitse ensiksi mihin kanavaan teet tägiä:</h2>
+    <ul>
+      <li><a href="url-builder.html" title="Digimainonta"><button type="button">Digimainonta</button></a></li>
+      <li><a href="organic-some.html" title="Orgaaninen some"><button type="button">Orgaaninen some</button></a></li>
+      <li><a href="crm.html" title="Asiakasviestinta"><button type="button">Asiakasviestintä</button></a></li>
+    </ul>
+  </div>
+
+<div class="otsikko">
+  <h1>MTV</h1>
+  <h3>Työkalu mainoslinkkien tägitykseen</h3>
+</div>
+
+<div class="builder">
+  <h4>Rakenna utm-tägi asiakasviestintää varten:</h4>
+  </br>
+  <label for="urlTieto">Kopioi URL tähän:</label>
+  <input type="url" id="urlTieto">
+  <span id="urlValidationMessage" style="color: red;"></span>
+  </br>
+  <p>Valitse parametrit:</p>
+
+  <label for="idAlasveto">utm_id:</label>
+  <select id="idAlasveto">
+    <option value=""></option>
+    <option value="all">all</option>
+    <option value="fta">fta</option>
+    <option value="avod">avod</option>
+    <option value="hvod:viihde">hvod:viihde</option>
+    <option value="hvod:sport">hvod:sport</option>
+    <option value="svod:viihde">svod:viihde</option>
+    <option value="svod:sport">svod:sport</option>
+    <option value="mtvuutiset">mtvuutiset</option>
+    <option value="mtvspotti">mtvspotti</option>
+  </select>
+
+  <label for="sourceAlasveto">utm_source:</label>
+  <select id="sourceAlasveto">
+    <option value="crm">crm</option>
+  </select>
+
+  <label for="mediumAlasveto">utm_medium:</label>
+  <select id="mediumAlasveto">
+   <!-- <option value=""></option> !-->
+    <option value="email">email</option>
+  </select>
+
+  <label for="contentAlasveto">utm_content:</label>
+  <select id="contentAlasveto">
+    <option value=""></option>
+    <option value="pre-launch">pre-launch</option>
+    <option value="launch">launch</option>
+    <option value="upsell">upsell</option>
+    <option value="activation">activation</option>
+    <option value="winback">winback</option>
+    <option value="always-on">always-on</option>
+  </select>
+
+  </br>
+  </br>
+  <label for="manuaalinenTieto">utm_campaign:</label>
+  <input type="text" id="manuaalinenTieto">
+
+  <p>Valmis URL:</br> <span id="tulokset"></span></p>
+  <button id="kopioiNappi">Kopioi URL</button>
+  </span>
+</div>
+
+<div class="ohjeet">
+  <h2>Ohjeet työkalun käyttöön:</h2>
+  <p>1. Valitse mihin tarkoitukseen teet tägiä. Tämä vaikuttaa valittavissa oleviin parametreihin.</p>
+  <p>2. Syötä URL -kenttään sivusto, jonne haluat sisällöstä ohjata  https:// -muodossa.</p>
+  <p>3. Valitse kampanjaasi sopivat parametrit alasvetovalikoista.</p>
+  <p>4. Kirjoita kampanjan nimi utm_campaign -kohtaan niin kuin se lukee mtv.fi:ssä korvaten välilyönnit väliviivalla (-) ja vaihtamalla ääkköset aakkosiksi.</p>
+  <p>5. Valmis URL tulostuu näkyviin. Huom! Mikäli kaikkia kenttiä (pl. url) ei ole täytetty, antaa työkalu virheilmoituksen.</p>
+  <p>6. Klikkaa "Kopioi URL" -nappia ja saat tägitetyn URL:n käyttöösi.</p>
+</br>
+</div>
+</body>
+</html>
