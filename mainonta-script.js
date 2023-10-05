@@ -95,8 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     tulokset += "?utm_id=" + valittuID + "&utm_source=" + valittuSource;
     tulokset += "&utm_medium=" + valittuMedium + "&utm_campaign=" + encodeURIComponent(manuaalinenTieto);
-    tulokset += "&utm_content=" + valittuContent;
-    tulokset += "&utm_custom=" + encodeURIComponent(manuaalinenCustom);
+    tulokset += "&utm_content=" + valittuContent += "&utm_custom=" + encodeURIComponent(manuaalinenCustom);
     
     tuloksetElementti.textContent = tulokset;
   }
