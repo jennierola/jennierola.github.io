@@ -42,7 +42,6 @@ img {
     margin-top: 25px;
 }
 
-
 .container {
   position: relative;
   text-align: center;
@@ -86,6 +85,16 @@ img {
   top: 8em;
   text-align: center;
   transform: translate(-50%)
+}
+
+.lista {
+  font-size: smaller;
+  line-height: 1.5; /* Voit muuttaa riviväliä tarpeesi mukaan. Esim. 1.5 tarkoittaa 1.5-kertaista riviväliä. */
+}
+  
+.alavalikko {
+  font-size: smaller;
+  line-height: 1.5; /* Voit muuttaa riviväliä tarpeesi mukaan. Esim. 1.5 tarkoittaa 1.5-kertaista riviväliä. */
 }
 
 @media screen and (max-width: 768px) {
