@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var valittuSource = sourceAlasveto.value;
     var valittuMedium = mediumAlasveto.value;
     var valittuContent = contentAlasveto.value;
-    var manuaalinenCustom = manuaalinenCustomField.value;
+  //  var manuaalinenCustom = manuaalinenCustomField.value;
     var manuaalinenTieto = manuaalinenTietoKentta.value;
 
     if (contentAlasveto.value === "custom") {
@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function() {
     tulokset += "?utm_id=" + valittuID + "&utm_source=" + valittuSource;
     tulokset += "&utm_medium=" + valittuMedium + "&utm_campaign=" + encodeURIComponent(manuaalinenTieto);
     tulokset += "&utm_content=" + valittuContent;
-    if (manuaalinenCustom) {
-      tulokset += "&utm_custom=" + encodeURIComponent(manuaalinenCustom);
-    }
+    // if (manuaalinenCustom) {
+    //  tulokset += "&utm_custom=" + encodeURIComponent(manuaalinenCustom);
+    //}
     
     tuloksetElementti.textContent = tulokset;
   }
