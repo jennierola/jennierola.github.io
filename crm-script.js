@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var customInputLabel = document.createElement("label"); // Create a label element
   var manuaalinenTietoKentta = document.getElementById("manuaalinenTieto");
   var manuaalinenCustomField = document.getElementById("manuaalinenCustom");
+  manuaalinenCustomField.setAttribute("placeholder", "Syötä utm_custom");
   var tuloksetElementti = document.getElementById("tulokset");
   var kopioiNappi = document.getElementById("kopioiNappi");
 
