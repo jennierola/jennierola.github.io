@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var customInputLabel = document.createElement("label"); // Create a label element
 
   var manuaalinenTietoKentta = document.getElementById("manuaalinenTieto");
+  var manuaalinenCustomField = document.getElementById("manuaalinenCustom");
   var tuloksetElementti = document.getElementById("tulokset");
   var kopioiNappi = document.getElementById("kopioiNappi");
 
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var valittuSource = sourceAlasveto.value;
     var valittuMedium = mediumAlasveto.value;
     var valittuContent = contentAlasveto.value;
-    //var valittuCustom = customAlasveto.value;
+    var manuaalinenCustom = manuaalinenCustomField.value;
     var manuaalinenTieto = manuaalinenTietoKentta.value;
 
     if (contentAlasveto.value === "custom") {
@@ -96,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
     tulokset += "?utm_id=" + valittuID + "&utm_source=" + valittuSource;
     tulokset += "&utm_medium=" + valittuMedium + "&utm_campaign=" + encodeURIComponent(manuaalinenTieto);
     tulokset += "&utm_content=" + valittuContent;
-   // tulokset += "&utm_custom=" + valittuCustom;
+    tulokset += "&utm_custom=" + encodeURIComponent(manuaalinenCustom);
     
     tuloksetElementti.textContent = tulokset;
   }
