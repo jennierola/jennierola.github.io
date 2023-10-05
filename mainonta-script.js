@@ -36,20 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
     contentAlasveto.appendChild(option);
   });
 
-  // var customAlasveto = document.getElementById("customAlasveto");
-  // Sort and update the options for utm_custom
-  // var customOptions = Array.from(customAlasveto.options);
-  // customOptions.sort(function(a, b) {
-  //  return a.text.localeCompare(b.text);
-  // });
-  // customAlasveto.innerHTML = '';
-  // customOptions.forEach(function(option) {
-  //  customAlasveto.appendChild(option);
-  // });
-
   var customInput = document.createElement("input");
   var customInputLabel = document.createElement("label"); // Create a label element
-
   var manuaalinenTietoKentta = document.getElementById("manuaalinenTieto");
   var manuaalinenCustomField = document.getElementById("manuaalinenCustom");
   var tuloksetElementti = document.getElementById("tulokset");
@@ -95,7 +83,10 @@ document.addEventListener("DOMContentLoaded", function() {
     
     tulokset += "?utm_id=" + valittuID + "&utm_source=" + valittuSource;
     tulokset += "&utm_medium=" + valittuMedium + "&utm_campaign=" + encodeURIComponent(manuaalinenTieto);
-    tulokset += "&utm_content=" + valittuContent += "&utm_custom=" + encodeURIComponent(manuaalinenCustom);
+    tulokset += "&utm_content=" + valittuContent;
+    if (manuaalinenCustom) {
+      tulokset += "&utm_custom=" + encodeURIComponent(manuaalinenCustom);
+    }
     
     tuloksetElementti.textContent = tulokset;
   }
