@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
       !valittuID ||
       !valittuSource ||
       !valittuMedium ||
-     // !valittuContent ||
+      !valittuContent ||
      // !valittuCustom ||
       !manuaalinenTieto 
     ) {
