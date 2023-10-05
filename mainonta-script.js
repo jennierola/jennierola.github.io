@@ -36,8 +36,20 @@ document.addEventListener("DOMContentLoaded", function() {
     contentAlasveto.appendChild(option);
   });
 
+  // var customAlasveto = document.getElementById("customAlasveto");
+  // Sort and update the options for utm_custom
+  // var customOptions = Array.from(customAlasveto.options);
+  // customOptions.sort(function(a, b) {
+  //  return a.text.localeCompare(b.text);
+  // });
+  // customAlasveto.innerHTML = '';
+  // customOptions.forEach(function(option) {
+  //  customAlasveto.appendChild(option);
+  // });
+
   var customInput = document.createElement("input");
   var customInputLabel = document.createElement("label"); // Create a label element
+
   var manuaalinenTietoKentta = document.getElementById("manuaalinenTieto");
   var tuloksetElementti = document.getElementById("tulokset");
   var kopioiNappi = document.getElementById("kopioiNappi");
@@ -55,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var valittuSource = sourceAlasveto.value;
     var valittuMedium = mediumAlasveto.value;
     var valittuContent = contentAlasveto.value;
+    //var valittuCustom = customAlasveto.value;
     var manuaalinenTieto = manuaalinenTietoKentta.value;
 
     if (contentAlasveto.value === "custom") {
@@ -67,7 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
       !valittuSource ||
       !valittuMedium ||
       !valittuContent ||
-      !manuaalinenTieto
+     // !valittuCustom ||
+      !manuaalinenTieto 
     ) {
       tuloksetElementti.textContent = "Ole hyvä ja täytä kaikki kentät.";
       return;
@@ -82,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
     tulokset += "?utm_id=" + valittuID + "&utm_source=" + valittuSource;
     tulokset += "&utm_medium=" + valittuMedium + "&utm_campaign=" + encodeURIComponent(manuaalinenTieto);
     tulokset += "&utm_content=" + valittuContent;
+   // tulokset += "&utm_custom=" + valittuCustom;
     
     tuloksetElementti.textContent = tulokset;
   }
