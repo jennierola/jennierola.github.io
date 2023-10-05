@@ -88,11 +88,12 @@ img {
 }
 
 .lista {
+  font-size: 100%;
   line-height: 1.5; /* Voit muuttaa riviväliä tarpeesi mukaan. Esim. 1.5 tarkoittaa 1.5-kertaista riviväliä. */
 }
   
 .alavalikko {
-  font-size: smaller;
+  font-size: 80%;
   line-height: 1.5; /* Voit muuttaa riviväliä tarpeesi mukaan. Esim. 1.5 tarkoittaa 1.5-kertaista riviväliä. */
 }
 
