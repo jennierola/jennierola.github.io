@@ -73,6 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (contentAlasveto.value === "custom") {
     valittuContent = customInput.value;
   }
+    if (valittuContent === "custom" && customInput.value) {
+    // Käytä "Lisää oma" -kenttää, jos utm_content on "custom" ja kenttä ei ole tyhjä
+    valittuContent = customInput.value;
+  }
+
     // Virheilmoitus, mikäli tarvittavia kenttiä ei ole täytetty
     if (
       /*!manuaalinenURL || */
