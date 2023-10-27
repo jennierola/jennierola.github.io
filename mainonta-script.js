@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to extract the "name" part from the URL
   function extractNameFromURL(url) {
     var urlParts = url.split('/');
-    if (urlParts.length >= 2) {
+    if (urlParts.length >= 3) {
       // Get the last part of the URL, which is assumed to be the "name"
       return urlParts[urlParts.length - 1];
     }
