@@ -7,7 +7,7 @@ urlTietoKentta.addEventListener("input", function() {
   var name = extractNameFromURL(url);
 
     // Set the extracted "name" as the value for utm_campaign only if the second part of the URL is "program"
-  if (isProgramURL(url)) {
+  if (containsOhjelma(url)) {
       manuaalinenTietoKentta.value = name;
     }
 
@@ -77,21 +77,14 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to extract the "name" part from the URL
   function extractNameFromURL(url) {
     var urlParts = url.split('/');
-    if (urlParts.length >= 3) {
-      // Get the last part of the URL, which is assumed to be the "name"
-      return urlParts[urlParts.length - 1];
-    }
-    return "";
+    var namePart = urlParts.find(part => part.includes("ohjelma")); // Etsi osa, joka sisältää "ohjelma"
+    return namePart || "";
   }
 
   // Function to check if the second part of the URL is "ohjelma"
-  function isOhjelmaURL(url) {
-    var urlParts = url.split('/');
-    if (urlParts.length >= 3) {
-      return urlParts[1] === "ohjelma";
-    }
-    return false;
-  } 
+  function containsOhjelma(url) {
+    return url.includes("ohjelma");
+  }
   });
   
   // Tallenna arvot funktioon
