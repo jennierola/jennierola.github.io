@@ -58,8 +58,44 @@ document.addEventListener("DOMContentLoaded", function() {
   urlTietoKentta.addEventListener("input", function() {
     paivitaTulokset();
     validateURL();
+document.addEventListener("DOMContentLoaded", function() {
+  // ... Your existing code ...
+
+  // Add an event listener to the "Kopioi URL tähän" input field
+  urlTietoKentta.addEventListener("input", function() {
+    // Extract the "name" part from the URL
+    var url = urlTietoKentta.value;
+    var name = extractNameFromURL(url);
+
+    // Set the extracted "name" as the value for utm_campaign only if the second part of the URL is "program"
+    if (isProgramURL(url)) {
+      manuaalinenTietoKentta.value = name;
+    }
+
+    // Update the URL builder with the extracted name
+    paivitaTulokset();
   });
 
+  // Function to extract the "name" part from the URL
+  function extractNameFromURL(url) {
+    var urlParts = url.split('/');
+    if (urlParts.length >= 2) {
+      // Get the last part of the URL, which is assumed to be the "name"
+      return urlParts[urlParts.length - 1];
+    }
+    return "";
+  }
+
+  // Function to check if the second part of the URL is "ohjelma"
+  function isOhjelmaURL(url) {
+    var urlParts = url.split('/');
+    if (urlParts.length >= 2) {
+      return urlParts[1] === "ohjelma";
+    }
+    return false;
+  } 
+  });
+  
   // Tallenna arvot funktioon
   function paivitaTulokset() {
     var manuaalinenURL = urlTietoKentta.value;
