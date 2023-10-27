@@ -58,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
   urlTietoKentta.addEventListener("input", function() {
     paivitaTulokset();
     validateURL();
-document.addEventListener("DOMContentLoaded", function() {
-  // ... Your existing code ...
 
   // Add an event listener to the "Kopioi URL tähän" input field
   urlTietoKentta.addEventListener("input", function() {
