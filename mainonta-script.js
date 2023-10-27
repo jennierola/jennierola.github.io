@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to check if the second part of the URL is "ohjelma"
   function isOhjelmaURL(url) {
     var urlParts = url.split('/');
-    if (urlParts.length >= 2) {
+    if (urlParts.length >= 3) {
       return urlParts[1] === "ohjelma";
     }
     return false;
