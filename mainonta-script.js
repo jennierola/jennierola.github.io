@@ -1,20 +1,4 @@
-
 // Tallennetaan elementtien viittaukset myöhempää käyttöä varten 
-  // Add an event listener to the "Kopioi URL tähän" input field
-urlTietoKentta.addEventListener("input", function() {
-    // Extract the "name" part from the URL
-  var url = urlTietoKentta.value;
-  var name = extractNameFromURL(url);
-
-    // Set the extracted "name" as the value for utm_campaign only if the second part of the URL is "program"
-  if (containsOhjelma(url)) {
-      manuaalinenTietoKentta.value = name;
-    }
-
-    // Update the URL builder with the extracted name
-  paivitaTulokset();
-  });
-
 document.addEventListener("DOMContentLoaded", function() {
   var urlTietoKentta = document.getElementById("urlTieto");
   var idAlasveto = document.getElementById("idAlasveto");
@@ -73,18 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
   urlTietoKentta.addEventListener("input", function() {
     paivitaTulokset();
     validateURL();
-
-  // Function to extract the "name" part from the URL
-  function extractNameFromURL(url) {
-    var urlParts = url.split('/');
-    var namePart = urlParts.find(part => part.includes("ohjelma")); // Etsi osa, joka sisältää "ohjelma"
-    return namePart || "";
-  }
-
-  // Function to check if the second part of the URL is "ohjelma"
-  function containsOhjelma(url) {
-    return url.includes("ohjelma");
-  }
   });
   
   // Tallenna arvot funktioon
